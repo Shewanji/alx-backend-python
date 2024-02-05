@@ -109,7 +109,6 @@ class TestMemoize(unittest.TestCase):
         Test that calling a_property twice returns the correct result,
         and a_method is only called once using assert_called_once.
         """
-        test_instance = self.TestClass()
 
         # Mock the a_method
         with patch.object(
