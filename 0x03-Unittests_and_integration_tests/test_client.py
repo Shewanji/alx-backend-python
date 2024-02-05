@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+"""Test cases for client module"""
+
 import unittest
 from unittest.mock import patch, MagicMock, Mock
 from parameterized import parameterized

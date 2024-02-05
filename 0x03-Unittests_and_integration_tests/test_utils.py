@@ -95,12 +95,12 @@ class TestMemoize(unittest.TestCase):
         Test class with a memoized property.
         """
 
-        def a_method(self):
+        def a_method(self) -> int:
             """mocked method for testing"""
             return 42
 
         @memoize
-        def a_property(self):
+        def a_property(self) -> int:
             """property to be tested using memoize decorator"""
             return self.a_method()
 
@@ -109,6 +109,7 @@ class TestMemoize(unittest.TestCase):
         Test that calling a_property twice returns the correct result,
         and a_method is only called once using assert_called_once.
         """
+        test_instance = self.TestClass()
 
         # Mock the a_method
         with patch.object(
